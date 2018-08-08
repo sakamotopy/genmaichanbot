@@ -152,7 +152,7 @@ async def on_message(message):
 		c = ('```yo        ->    genmaichan will says yo!```')
 		d = ('```bitcoin   ->    show bitcoin price(currency pair:monacoin,ethereum,nem,pepecash)```')
 #		e = ('```priceall  ->    show cryptcurrency price```')
-		f = ('```あ ```')
+		f = ('```nyan      ->    ... ```')
 		g = ('```weather   ->    show weather```')
 		h = ('```wiki **   ->    search that word in Wikipedia```')
 		i = ('```dice      ->	play dice```')
