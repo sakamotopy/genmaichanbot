@@ -146,13 +146,16 @@ async def on_message(message):
 #			go = random.randint(1,100)
 #		gorira_ran = gorira()
 #		await client.send_message(message.channel,str(gorira_ran))
+	if message.content.startswith('にゃんにゃん'):
+		await client.send_message(message.channel, 'https://youtu.be/MOSYstIWZug')
+
 	if message.content.startswith('help'):
 		a = ('```help      ->    show help```')
 		b = ('```ocha      ->    you get a tea```')
 		c = ('```yo        ->    genmaichan will says yo!```')
 		d = ('```bitcoin   ->    show bitcoin price(currency pair:monacoin,ethereum,nem,pepecash)```')
 #		e = ('```priceall  ->    show cryptcurrency price```')
-		f = ('```nyan      ->    ... ```')
+		f = ('```にゃんにゃん->   うおおおおおおおおおお ```')
 		g = ('```weather   ->    show weather```')
 		h = ('```wiki **   ->    search that word in Wikipedia```')
 		i = ('```dice      ->	play dice```')
