@@ -158,6 +158,6 @@ async def on_message(message):
 		i = ('```dice      ->	play dice```')
 		j = ('```omikuji   ->	let show your fortune```')
 
-		await client.send_message(message.channel, a+b+c+d+g+h+i+j)
+		await client.send_message(message.channel, a+b+c+d+g+h+i+j+f)
 
 client.run(BOT_TOKEN)
