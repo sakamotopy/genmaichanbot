@@ -14,7 +14,6 @@ import lxml
 import sys
 import codecs
 import time
-#from dscrdtkn import dscrdtkn
 
 zaif = ZaifPublicApi()
 
