@@ -109,8 +109,8 @@ async def on_message(message):
 		num5 = random.randint(1,6)
 		num6 = random.randint(1,6)		
 		oyako = ["親","子"]
-		oyaorko = ramdom.choice(oyako)
-		oyakoresult = "あなたは、「"+oyaorko+"」です。"
+		oyaorko = random.choice(oyako)
+		oyakoresult = "あなたは、「" +oyaorko+ "」です。"
 
 		def chin_result():
 			if num == num2 and num == num3 and num != 1:
@@ -163,7 +163,7 @@ async def on_message(message):
 		chin6 = str(num6)
 		chinchiro_1 = '['+chin+']['+chin2+']['+chin3+']\n' + str(cr)
 		chinchiro_2 = '['+chin4+']['+chin5+']['+chin6+']\n' + str(cr2)
-		await client.send_message(message.channel,chinchiro_1 + '\n\n' + chinchiro_2)
+		await client.send_message(message.channel,oyakoresult + '\n' + chinchiro_1 + '\n\n' + chinchiro_2)
 
 	if message.content.startswith('omikuji'):
 		omikuji = ["very good luck :)","good luck :>","bad luck :(","f**k you"]
