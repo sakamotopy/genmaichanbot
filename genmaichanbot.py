@@ -124,7 +124,7 @@ async def on_message(message):
 			elif num in range(1,3) and num2 in range(1,3) and num3 in range(1,3) and num != num2 and num2 != num3 and num2 != num3:
 				return("ヒフミ！負け…")
 			elif num != num2 and num2 != num3 and num3 != num:
-				return("")
+				return("役無し！負け！")
 			else:
 				return("バトル！")
 		
