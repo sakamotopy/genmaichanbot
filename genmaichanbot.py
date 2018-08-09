@@ -165,7 +165,7 @@ async def on_message(message):
 		await client.send_message(message.channel,oyakoresult + '\n`親 → ' + chinchiro_1+'`' + '\n\n`子 → ' + chinchiro_2+'`')
 
 	if message.content.startswith('omikuji'):
-		omikuji = ["おめでとうございます！！\n超大吉です！天才！すごい！！","吉。普通ね。","あっ、、大凶！\nお祓いしときます…","f**k you"]
+		omikuji = ["おめでとう！！\n超大吉だよ！天才！すごい！！","吉。普通だね！","あっ、、大凶！\nお祓いしときますね…","f**k you"]
 		omikuji_r = "{0.author.mention} ".format(message) +"\n"+  random.choice(omikuji)
 		await client.send_message(message.channel,omikuji_r)
 #	if message.content.startswith('def'):
