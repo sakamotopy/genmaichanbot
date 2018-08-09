@@ -104,7 +104,6 @@ async def on_message(message):
 		dice1 = ":game_die: --> "
 		await client.send_message(message.channel,dice1+str(num) )
 	if message.content.startswith('chinchiro'):
-#		def chin_result():
 		num = random.randint(1,6)
 		num2 = random.randint(1,6)
 		num3 = random.randint(1,6)
@@ -148,6 +147,8 @@ async def on_message(message):
 #		await client.send_message(message.channel,str(gorira_ran))
 	if message.content.startswith('にゃんにゃん'):
 		await client.send_message(message.channel, 'https://youtu.be/MOSYstIWZug')
+	if message.content.startswith('はあと様'):
+		await client.send_message(message.channel, 'かわいい！'+\n+'https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg')
 
 	if message.content.startswith('help'):
 		a = ('```help      ->    show help```')
