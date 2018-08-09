@@ -78,8 +78,6 @@ async def on_message(message):
 
 		title_tag = soup.title
 		title = title_tag.string
-
-#		print()
 		m = html_wikiurl +'\n'+ title +'\n'
 		await client.send_message(message.channel,m )
 
@@ -95,20 +93,25 @@ async def on_message(message):
 	if message.content.startswith('test '):
 		wikiurl = 'https://ja.m.wikipedia.org/wiki/'+message.content[5:]
 		await client.send_message(message.channel,wikiurl)
-
-
 	if message.content.startswith('dango'):
 		await client.send_message(message.channel, ':dango:' )
 	if message.content.startswith('dice'):
 		num = random.randint(1,6)
 		dice1 = ":game_die: --> "
 		await client.send_message(message.channel,dice1+str(num) )
+
+
 	if message.content.startswith('chinchiro'):
 		num = random.randint(1,6)
 		num2 = random.randint(1,6)
 		num3 = random.randint(1,6)
-#			oyako = ["oya","ko"]
-#			orako_choice = ramdom.choice(oyako)
+		num4 = random.randint(1,6)
+		num5 = random.randint(1,6)
+		num6 = random.randint(1,6)		
+		oyako = ["親","子"]
+		oyaorko = ramdom.choice(oyako)
+		oyakoresult = "あなたは、「"+oyaorko+"」です。"
+
 		def chin_result():
 			if num == num2 and num == num3 and num != 1:
 				return ("point x3\n")
@@ -124,17 +127,43 @@ async def on_message(message):
 				return("point x-1\n>>you lose.")
 			else:
 				return("point x -1\n>>battle!")
+		
+		def chin_result2():
+			if num4 == num5 and num4 == num6 and num != 1:
+				return ("point x3\n")
+			elif num4 == 1 and num5 == 1 and num6 == 1:
+				return ("point x5\n>>you win!!")
+			elif num4 in range(4,6) and num5 == range(4,6) and num6 == range(4,6) and num4 != num5 and num5 != num6 and num6 != num4:
+				return("point x2\n>>you win!")
+			elif num4 == num5 or num5 == num6 or num6 == num4:
+				return("point x1\n>>battle!")
+			elif num4 in range(1,3) and num5 in range(1,3) and num6 in range(1,3) and num4 != num5 and num5 != num6 and num5 != num6:
+				return("point x-1\n>>you lose...")
+			elif num4 != num5 and num5 != num6 and num6 != num4:
+				return("point x-1\n>>you lose.")
+			else:
+				return("point x -1\n>>battle!")
+#
+
+
 #		if oyako_choice == "oya":
 #			chin_result()
 #		elif oyako_choice == "ko":
-#			chin_result()
+#			chin_result2()
 #		else:
 #			pass
+
 		cr = chin_result()
+		cr2 = chin_result2()
 		chin = str(num)
 		chin2 = str(num2)
 		chin3 = str(num3)
-		await client.send_message(message.channel,'['+chin+']['+chin2+']['+chin3+']\n' + str(cr))
+		chin4 = str(num4)
+		chin5 = str(num5)
+		chin6 = str(num6)
+		chinchiro_1 = '['+chin+']['+chin2+']['+chin3+']\n' + str(cr)
+		chinchiro_2 = '['+chin4+']['+chin5+']['+chin6+']\n' + str(cr2)
+		await client.send_message(message.channel,chinchiro_1 + '\n\n' + chinchiro_2)
 
 	if message.content.startswith('omikuji'):
 		omikuji = ["very good luck :)","good luck :>","bad luck :(","f**k you"]
