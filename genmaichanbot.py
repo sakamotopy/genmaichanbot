@@ -162,7 +162,7 @@ async def on_message(message):
 		chin6 = str(num6)
 		chinchiro_1 = '['+chin+']['+chin2+']['+chin3+']\n' + str(cr)
 		chinchiro_2 = '['+chin4+']['+chin5+']['+chin6+']\n' + str(cr2)
-		await client.send_message(message.channel,oyakoresult + '\n親→' + chinchiro_1 + '\n\n子→' + chinchiro_2)
+		await client.send_message(message.channel,oyakoresult + '\n`親 → ' + chinchiro_1+'`' + '\n\n`子 → ' + chinchiro_2+'`')
 
 	if message.content.startswith('omikuji'):
 		omikuji = ["very good luck :)","good luck :>","bad luck :(","f**k you"]
