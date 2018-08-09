@@ -114,36 +114,35 @@ async def on_message(message):
 
 		def chin_result():
 			if num == num2 and num == num3 and num != 1:
-				return ("point x3\n")
+				return ("ゾロ目！バトル！\n攻撃力"+str(num)+"！")
 			elif num == 1 and num2 == 1 and num3 == 1:
-				return ("point x5\n>>you win!!")
+				return ("ピンゾロ！勝ち！")
 			elif num in range(4,6) and num2 == range(4,6) and num3 == range(4,6) and num != num2 and num2 != num3 and num3 != num:
-				return("point x2\n>>you win!")
-			elif num == num2 or num2 == num3 or num3 == num:
-				return("point x1\n>>battle!")
+				return("シゴロ！勝ち！")
+#			elif num == num2 or num2 == num3 or num3 == num:
+#				return("")
 			elif num in range(1,3) and num2 in range(1,3) and num3 in range(1,3) and num != num2 and num2 != num3 and num2 != num3:
-				return("point x-1\n>>you lose...")
+				return("ヒフミ！負け…")
 			elif num != num2 and num2 != num3 and num3 != num:
-				return("point x-1\n>>you lose.")
+				return("")
 			else:
-				return("point x -1\n>>battle!")
+				return("バトル！")
 		
 		def chin_result2():
-			if num4 == num5 and num4 == num6 and num != 1:
-				return ("point x3\n")
+			if num4 == num5 and num4 == num6 and num4 != 1:
+				return ("ゾロ目！攻撃力"+ str(num4) +"！")
 			elif num4 == 1 and num5 == 1 and num6 == 1:
-				return ("point x5\n>>you win!!")
+				return ("ピンゾロ！ちょーつえー！")
 			elif num4 in range(4,6) and num5 == range(4,6) and num6 == range(4,6) and num4 != num5 and num5 != num6 and num6 != num4:
-				return("point x2\n>>you win!")
-			elif num4 == num5 or num5 == num6 or num6 == num4:
-				return("point x1\n>>battle!")
+				return("シゴロ！")
+#			elif num4 == num5 or num5 == num6 or num6 == num4:
+#				return("point x1\n>>battle!")
 			elif num4 in range(1,3) and num5 in range(1,3) and num6 in range(1,3) and num4 != num5 and num5 != num6 and num5 != num6:
-				return("point x-1\n>>you lose...")
+				return("ヒフミ…負け！")
 			elif num4 != num5 and num5 != num6 and num6 != num4:
-				return("point x-1\n>>you lose.")
+				return("役無し！負け！")
 			else:
-				return("point x -1\n>>battle!")
-#
+				return("バトル！")
 
 
 #		if oyako_choice == "oya":
@@ -163,7 +162,7 @@ async def on_message(message):
 		chin6 = str(num6)
 		chinchiro_1 = '['+chin+']['+chin2+']['+chin3+']\n' + str(cr)
 		chinchiro_2 = '['+chin4+']['+chin5+']['+chin6+']\n' + str(cr2)
-		await client.send_message(message.channel,oyakoresult + '\n' + chinchiro_1 + '\n\n' + chinchiro_2)
+		await client.send_message(message.channel,oyakoresult + '\n親→' + chinchiro_1 + '\n\n子→' + chinchiro_2)
 
 	if message.content.startswith('omikuji'):
 		omikuji = ["very good luck :)","good luck :>","bad luck :(","f**k you"]
