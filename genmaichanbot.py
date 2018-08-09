@@ -148,7 +148,7 @@ async def on_message(message):
 	if message.content.startswith('にゃんにゃん'):
 		await client.send_message(message.channel, 'https://youtu.be/MOSYstIWZug')
 	if message.content.startswith('はあと様'):
-		await client.send_message(message.channel, 'かわいい！'+\n+'https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg')
+		await client.send_message(message.channel, 'かわいい！\n'+'https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg')
 
 	if message.content.startswith('help'):
 		a = ('```help      ->    show help```')
