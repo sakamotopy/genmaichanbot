@@ -1,1 +1,2 @@
 # genmaichanbot
+discordbot
