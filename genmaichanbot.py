@@ -110,21 +110,21 @@ async def on_message(message):
 		num6 = random.randint(1,6)		
 		oyako = ["親","子"]
 		oyaorko = random.choice(oyako)
-		oyakoresult = "あなたは、「" +oyaorko+ "」です。"
+		oyakoresult = "あなたは「" +oyaorko+ "」です。"
 
 		def chin_result():
 			if num == num2 and num == num3 and num != 1:
 				return ("ゾロ目！バトル！\n攻撃力"+str(num)+"！")
 			elif num == 1 and num2 == 1 and num3 == 1:
-				return ("ピンゾロ！勝ち！")
+				return ("ピンゾロ！無条件勝利！")
 			elif num in range(4,6) and num2 == range(4,6) and num3 == range(4,6) and num != num2 and num2 != num3 and num3 != num:
-				return("シゴロ！勝ち！")
+				return("シゴロ！無条件勝利！")
 #			elif num == num2 or num2 == num3 or num3 == num:
 #				return("")
 			elif num in range(1,3) and num2 in range(1,3) and num3 in range(1,3) and num != num2 and num2 != num3 and num2 != num3:
-				return("ヒフミ！負け…")
+				return("ヒフミ…")
 			elif num != num2 and num2 != num3 and num3 != num:
-				return("役無し！負け！")
+				return("役無し！")
 			else:
 				return("バトル！")
 		
