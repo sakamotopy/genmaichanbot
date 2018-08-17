@@ -19,10 +19,10 @@ zaif = ZaifPublicApi()
 
 client = discord.Client()
 
-jsopen1 = open("/home/ubuntu/genmaichanbot/token.json" , 'r')
+jsopen1 = open("/home/ubuntu/genmaichanbot/token.json")
 jsload1 = json.load(jsopen1)
-#token = json['bot']['token']
-print(jsload1)
+token = jsload1['bot']['token']
+print(token)
 BOT_TOKEN = jsload1
 
 @client.event
