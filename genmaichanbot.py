@@ -24,7 +24,7 @@ jsload1 = json.load(jsopen1)
 jsstr1 = json.dumps(jsload1)
 token = jsstr1['bot']['token']
 print(token)
-BOT_TOKEN = token
+BOT_TOKEN = ""+token+""
 
 @client.event
 async def on_ready():
