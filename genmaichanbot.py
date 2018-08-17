@@ -23,7 +23,7 @@ jsopen1 = open("/home/ubuntu/genmaichanbot/token.json")
 jsload1 = json.load(jsopen1)
 #jsstr1 = json.dumps(jsload1)
 token = jsload1['bot']['token']
-print(token)
+
 BOT_TOKEN = token
 
 @client.event
