@@ -21,9 +21,10 @@ client = discord.Client()
 
 jsopen1 = open("/home/ubuntu/genmaichanbot/token.json")
 jsload1 = json.load(jsopen1)
-token = jsload1['bot']['token']
+jsstr1 = json.dumps(jsload1)
+token = jsstr1['bot']['token']
 print(token)
-BOT_TOKEN = jsload1
+BOT_TOKEN = token
 
 @client.event
 async def on_ready():
