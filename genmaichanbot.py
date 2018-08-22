@@ -198,13 +198,13 @@ async def on_message(message):
 
 		
 	if message.content.startswith('/help'):
-		helpm = "('```help        ->    show help"+\n \
-		"bitcoin     ->    show bitcoin price"+\n+"		(currency pair:monacoin,ethereum,nem,pepecash)"+\n \
-		"weather     ->    show weather"+\n \
-		"wiki **     ->    search that word in Wikipedia"\n \
-		"dice        ->	play dice"+\n \
-		"omikuji  　 ->	let show your fortune"+\n \
-		"にゃんにゃん ->   うおおおおおおおおおお```')"
+		helpm = '(\'```help        ->    show help\n' \
+		'bitcoin     ->    show bitcoin price(monacoin,ethereum,nem,pepecash)\n' \
+		'weather     ->    show weather\n' \
+		'wiki **     ->    search that word in Wikipedia\n' \
+		'dice        ->	   play dice\n' \
+		'omikuji  　 ->	  let show your fortune\n' \
+		'にゃんにゃん ->    うおおおおおおおおおお```\')'
 		await client.send_message(message.channel, helpm)
 
 client.run(BOT_TOKEN)
