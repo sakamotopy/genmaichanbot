@@ -182,7 +182,7 @@ async def on_message(message):
 	if message.content.startswith('はあと様'):
 		await client.send_message(message.channel, 'かわいい！\n'+'https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg')
 
-	if message.content.startswith('help'):
+	if message.content.startswith('/help'):
 		a = ('```help      ->    show help```')
 		b = ('```ocha      ->    you get a tea```')
 		c = ('```yo        ->    genmaichan will says yo!```')
@@ -195,5 +195,16 @@ async def on_message(message):
 		j = ('```omikuji   ->	let show your fortune```')
 
 		await client.send_message(message.channel, a+b+c+d+g+h+i+j+f)
+
+		
+	if message.content.startswith('help'):
+		helpm =('```help        ->    show help\n\
+			bitcoin     ->    show bitcoin price(currency pair:monacoin,ethereum,nem,pepecash)\n\
+			weather     ->    show weather\n\
+			wiki **     ->    search that word in Wikipedia\n\
+			dice        ->	play dice\n\
+			omikuji  　 ->	let show your fortune\n\
+			にゃんにゃん ->   うおおおおおおおおおお```')
+		await client.send_message(message.channel, helpm)
 
 client.run(BOT_TOKEN)
