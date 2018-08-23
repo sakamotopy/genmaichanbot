@@ -210,9 +210,9 @@ async def on_message(message):
 		embed = discord.Embed(title="玄米ちゃんBOT 取扱説明書")
 		embed.add_field(name="help", value="使い方を表示します。")
 		embed.add_field(name="weather", value="関東周辺の天気予報を教えます。")
-		embed.add_field(name="wiki", value="Wikipediaから情報を持ってきます。(例:wiki ゴリラ)	")
-		embed.add_field(name="omikuji", value="あなたの運勢を占います。")
+		embed.add_field(name="wiki", value="Wikipediaの情報を持ってきます。例:wiki ゴリラ")
 		embed.add_field(name="bitcoin", value="bitcoinの価格を表示します。対応通貨(monacoin,ethereum,nem,pepecash)")
+		embed.add_field(name="omikuji", value="あなたの運勢を占います。")
 		embed.add_field(name="chinchiro", value="チンチロリンでバトルができます。")
 		await client.send_message(message.channel, embed=embed)
 
