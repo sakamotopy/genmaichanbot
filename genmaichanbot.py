@@ -85,7 +85,7 @@ async def on_message(message):
 		m = html_wikiurl +'\n'+ title +'\n'
 		await client.send_message(message.channel,m )
 
-	if message.content.startswith('wiki '):
+	if message.content.startswith('wiki'):
 		wikipedia.set_lang('ja')
 		search_text = message.content[5:]
 		search_response = wikipedia.search(search_text)
