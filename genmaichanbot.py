@@ -136,7 +136,7 @@ async def on_message(message):
 			if num4 == num5 and num4 == num6 and num4 != 1:
 				return ("ゾロ目！攻撃力"+ str(num4) +"！")
 			elif num4 == 1 and num5 == 1 and num6 == 1:
-				return ("ピンゾロ！ちょーつえー！")
+				return ("ピンゾロ！つよい！")
 			elif num4 in range(4,6) and num5 == range(4,6) and num6 == range(4,6) and num4 != num5 and num5 != num6 and num6 != num4:
 				return("シゴロ！")
 #			elif num4 == num5 or num5 == num6 or num6 == num4:
@@ -207,12 +207,12 @@ async def on_message(message):
 		'にゃんにゃん ->    うおおおおおおおおおお```'
 		await client.send_message(message.channel, helpm)
 	if message.content == "help":
-		embed = discord.Embed(title="玄米ちゃんBOT")
+		embed = discord.Embed(title="玄米ちゃんBOT 取扱説明書")
 		embed.add_field(name="help", value="使い方を表示します。")
 		embed.add_field(name="weather", value="関東周辺の天気予報を教えます。")
-		embed.add_field(name="wiki", value="wiki **(**は任意の文字列)と入力するとwikipediaから情報を持ってきます。")
-		embed.add_field(name="omikuji", value="あなたの運勢を占います")
-		embed.add_field(name="bitcoin", value="bitcoinの価格を表示します。他にも(monacoin,ethereum,nem,pepecash)があります。")
+		embed.add_field(name="wiki", value="Wikipediaから情報を持ってきます。(例:wiki ゴリラ)")
+		embed.add_field(name="omikuji", value="あなたの運勢を占います。")
+		embed.add_field(name="bitcoin", value="bitcoinの価格を表示します。対応通貨(monacoin,ethereum,nem,pepecash)")
 		embed.add_field(name="chinchiro", value="チンチロリンでバトルができます。")
 		await client.send_message(message.channel, embed=embed)
 
