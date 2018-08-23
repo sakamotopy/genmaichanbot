@@ -148,14 +148,6 @@ async def on_message(message):
 			else:
 				return("バトル！")
 
-
-#		if oyako_choice == "oya":
-#			chin_result()
-#		elif oyako_choice == "ko":
-#			chin_result2()
-#		else:
-#			pass
-
 		cr = chin_result()
 		cr2 = chin_result2()
 		chin = str(num)
@@ -182,30 +174,6 @@ async def on_message(message):
 	if message.content.startswith('はあと様'):
 		await client.send_message(message.channel, 'かわいい！\n'+'https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg')
 
-	if message.content.startswith('.help'):
-		a = ('```help      ->    show help```')
-		b = ('```ocha      ->    you get a tea```')
-		c = ('```yo        ->    genmaichan will says yo!```')
-		d = ('```bitcoin   ->    show bitcoin price(currency pair:monacoin,ethereum,nem,pepecash)```')
-#		e = ('```priceall  ->    show cryptcurrency price```')
-		f = ('```にゃんにゃん->   うおおおおおおおおおお ```')
-		g = ('```weather   ->    show weather```')
-		h = ('```wiki **   ->    search that word in Wikipedia```')
-		i = ('```dice      ->	play dice```')
-		j = ('```omikuji   ->	let show your fortune```')
-
-		await client.send_message(message.channel, a+b+c+d+g+h+i+j+f)
-
-		
-	if message.content.startswith('/help'):
-		helpm = '```help        ->    show help\n' \
-		'bitcoin     ->    show bitcoin price(monacoin,ethereum,nem,pepecash)\n' \
-		'weather     ->    show weather\n' \
-		'wiki **     ->    search that word in Wikipedia\n' \
-		'dice        ->	   play dice\n' \
-		'omikuji  　 ->	  let show your fortune\n' \
-		'にゃんにゃん ->    うおおおおおおおおおお```'
-		await client.send_message(message.channel, helpm)
 	if message.content == "help":
 		embed = discord.Embed(title="玄米ちゃんBOT 取扱説明書")
 		embed.add_field(name="help", value="使い方を表示します。")
