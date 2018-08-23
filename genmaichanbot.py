@@ -207,8 +207,6 @@ async def on_message(message):
 		'にゃんにゃん ->    うおおおおおおおおおお```'
 		await client.send_message(message.channel, helpm)
 	if message.content == "help":
-		start = time.time()
-#		currenttime = (datetime.now().strftime("%Y/%m/%d %H:%M:%S"))
 		embed = discord.Embed(title="玄米ちゃんBOT")
 		embed.set_footer(text=" Created message at | " + currenttime + "")
 		embed.add_field(name="help", value="使い方を表示します。")
@@ -218,6 +216,5 @@ async def on_message(message):
 		embed.add_field(name="bitcoin", value="bitcoinの価格を表示します。他にも(monacoin,ethereum,nem,pepecash)があります。")
 		embed.add_field(name="chinchiro", value="チンチロリンでバトルができます。")
 		await client.send_message(message.channel, embed=embed)
-		elapsed_time = time.time() - start
-		elapsed_time = str(elapsed_time)
+
 client.run(BOT_TOKEN)
