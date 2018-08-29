@@ -19,6 +19,9 @@ zaif = ZaifPublicApi()
 
 client = discord.Client()
 
+now = time.ctime()
+cnvtime = time.strptime(now)
+
 jsopen1 = open("token.json")
 jsload1 = json.load(jsopen1)
 token = jsload1['bot']['token']
@@ -175,13 +178,16 @@ async def on_message(message):
 		await client.send_message(message.channel, 'かわいい！\n'+'https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg')
 
 	if message.content.startswith('help'):
-		embed = discord.Embed(title="玄米ちゃんBOT 取扱説明書",color=0x47f558)
+		embed = discord.Embed(title="玄米ちゃんBOT 取扱説明書", color=0x47f558)
+#		embed.set_author(name="example", url="https:/example/",, icon_url="https:/example/")
+#		embed.add_field(name=example, value=example, inline=True)
 		embed.add_field(name="help", value="使い方を表示します。")
 		embed.add_field(name="weather", value="関東周辺の天気予報を教えます。")
 		embed.add_field(name="wiki", value="Wikipediaの情報を持ってきます。例:wiki　ゴリラ")
 		embed.add_field(name="bitcoin", value="bitcoinの価格を表示します。対応通貨(monacoin,ethereum,nem,pepecash)")
 		embed.add_field(name="omikuji", value="あなたの運勢を占います。")
 		embed.add_field(name="chinchiro", value="チンチロリンでバトルができます。")
+		embed.set_footer(text=time.strftime("%Y/%m/%d %H:%M", cnvtime))
 		await client.send_message(message.channel, embed=embed)
 
 client.run(BOT_TOKEN)
