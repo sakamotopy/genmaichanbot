@@ -184,9 +184,9 @@ async def on_message(message):
 		time1 = time.time()
 		for i in range(100):
 			i ** 100
-		time2 = time.time()
-		time3 = time2 - time1
-		time_result = str(time3)
+		time2 = time1 - time.time()
+		time_result = float(time2)
+		print ("elapsed_time:{0}".format(time_result) + "[sec]")
 		await client.send_message(message.channel, "処理時間:"+time_result)
 
 	if message.content.startswith('help'):
