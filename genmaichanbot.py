@@ -184,11 +184,14 @@ async def on_message(message):
 		time1 = time.time()
 		numbers1 = random.randint(0,2048)
 		numbers2 = random.randint(0,1024)
-		calculationnn = numbers1 ** numbers2
+		calculationnn = numbers1 * numbers2
 		time2 = time.time() - time1
 		time_result = str(time2)
 		aaaa = str(calculationnn)
-		last_m = aaaa+"\n処理時間:"+time_result+"秒"
+		bbbb = str(numbers1)
+		cccc = str(numbers2)
+		last_m = bbbb+" × "+cccc+"="+aaaa+"\n処理時間:"+time_result+"秒"
+		dddd = bbbb+" × "+cccc+"="+aaaa
 		print ("elapsed_time:{0}".format(time_result) + "[sec]")
 		await client.send_message(message.channel, last_m)
 
