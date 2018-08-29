@@ -175,7 +175,7 @@ async def on_message(message):
 		await client.send_message(message.channel, 'かわいい！\n'+'https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg')
 
 	if message.content.startswith('help'):
-		embed = discord.Embed(title="玄米ちゃんBOT 取扱説明書")
+		embed = discord.Embed(title="玄米ちゃんBOT 取扱説明書",color=0x47f558)
 		embed.add_field(name="help", value="使い方を表示します。")
 		embed.add_field(name="weather", value="関東周辺の天気予報を教えます。")
 		embed.add_field(name="wiki", value="Wikipediaの情報を持ってきます。例:wiki　ゴリラ")
