@@ -182,11 +182,11 @@ async def on_message(message):
 
 	if message.content.startswith('test'):
 		time1 = time.time()
-		for i in range(0,510475):
-			i ** 256
+		num1 = random.randint(0,1048576)
+		num2 = random.randint(0,1048576)
+		ans = num1 ** num2
 		time2 = time.time() - time1
-		ans = i ** 256
-		time_result = str(i) +" ^ 256 ="+str(ans)+"\n\n処理速度："+str(time2)+"秒です。"
+		time_result = str(num1)+ " ^ " +str(num2)+ " = " +str(ans)+ "\n\n処理速度："+str(time2)+"秒です。"
 		await client.send_message(message.channel, time_result)
 
 	if message.content.startswith('help'):
