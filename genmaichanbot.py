@@ -182,7 +182,7 @@ async def on_message(message):
 
 	if message.content.startswith('test'):
 		time1 = time.time()
-		for i in range(0,310475):
+		for i in range(0,510475):
 			i ** 256
 		time2 = time.time() - time1
 		ans = i ** 256
