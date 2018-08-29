@@ -187,7 +187,7 @@ async def on_message(message):
 		calculationnn = numbers1 ** numbers2
 		time2 = time.time() - time1
 		time_result = str(time2)
-		aaaa = str(calculation)
+		aaaa = str(calculationnn)
 		last_m = aaaa+"\n処理時間:"+time_result+"秒"
 		print ("elapsed_time:{0}".format(time_result) + "[sec]")
 		await client.send_message(message.channel, last_m)
