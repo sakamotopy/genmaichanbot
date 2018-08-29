@@ -188,7 +188,7 @@ async def on_message(message):
 #		numbers2 = random.randint(0,512)
 #		calculationnn = numbers1 ** numbers2
 		time2 = time.time() - time1
-		time_result = "処理速度："str(time2)+"秒です。"
+		time_result = "処理速度："+str(time2)+"秒です。"
 #		aaaa = str(calculationnn)
 #		bbbb = str(numbers1)
 #		cccc = str(numbers2)
