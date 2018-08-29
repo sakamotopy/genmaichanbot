@@ -183,7 +183,7 @@ async def on_message(message):
 	if message.content.startswith('test'):
 		time1 = time.time()
 		for i in range(1000000):
-		i ** 10
+			i ** 10
 #		numbers1 = random.randint(0,256)
 #		numbers2 = random.randint(0,512)
 #		calculationnn = numbers1 ** numbers2
