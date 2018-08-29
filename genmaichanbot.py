@@ -186,7 +186,7 @@ async def on_message(message):
 			i ** 100
 		time2 = time.time()
 		time3 = time1 - time2
-		m = 処理時間:{time3}
+		m = "処理時間:{time3}"
 		await client.send_message(message.channel, m)
 
 	if message.content.startswith('help'):
