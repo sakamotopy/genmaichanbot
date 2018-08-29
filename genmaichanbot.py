@@ -183,18 +183,9 @@ async def on_message(message):
 	if message.content.startswith('test'):
 		time1 = time.time()
 		for i in range(1000000):
-			i ** 10
-#		numbers1 = random.randint(0,256)
-#		numbers2 = random.randint(0,512)
-#		calculationnn = numbers1 ** numbers2
+			i ** 256
 		time2 = time.time() - time1
-		time_result = "処理速度："+str(time2)+"秒です。"
-#		aaaa = str(calculationnn)
-#		bbbb = str(numbers1)
-#		cccc = str(numbers2)
-#		last_m = bbbb+" ^ "+cccc+"="+aaaa+"\n処理時間:"+time_result+"秒"
-#		dddd = bbbb+" × "+cccc+"="+aaaa
-#		print ("elapsed_time:{0}".format(time_result) + "[sec]")
+		time_result = str(i)+"^256"+"\n処理速度："+str(time2)+"秒です。"
 		await client.send_message(message.channel, time_result)
 
 	if message.content.startswith('help'):
