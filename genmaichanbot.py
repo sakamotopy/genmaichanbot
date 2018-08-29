@@ -182,8 +182,8 @@ async def on_message(message):
 
 	if message.content.startswith('test'):
 		time1 = time.time()
-		num1 = random.randint(0,50000)
-		num2 = random.randint(0,50000)
+		num1 = random.randint(0,5000)
+		num2 = random.randint(0,5000)
 		ans = num1 ** num2
 		time2 = time.time() - time1
 		time_result = str(num1)+ " ^ " +str(num2)+ " = " +str(ans)+ "\n\n処理速度："+str(time2)+"秒です。"
