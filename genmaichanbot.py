@@ -182,7 +182,7 @@ async def on_message(message):
 
 	if message.content.startswith('test'):
 		time1 = time.time()
-		num1 = random.randint(0,1048576)
+		num1 = random.randint(0,256)
 		num2 = random.randint(0,1048576)
 		ans = num1 ** num2
 		time2 = time.time() - time1
