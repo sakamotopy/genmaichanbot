@@ -182,6 +182,6 @@ async def on_message(message):
 		embed.add_field(name="bitcoin", value="bitcoinの価格を表示します。対応通貨(monacoin,ethereum,nem,pepecash)")
 		embed.add_field(name="omikuji", value="あなたの運勢を占います。")
 		embed.add_field(name="chinchiro", value="チンチロリンでバトルができます。")
-		await client.send_message(message.channel, embed)
+		await client.send_message(message.channel, embed=embed)
 
 client.run(BOT_TOKEN)
