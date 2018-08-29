@@ -182,12 +182,15 @@ async def on_message(message):
 
 	if message.content.startswith('test'):
 		time1 = time.time()
-		for i in range(256):
-			i ** 51609
+		number1 = random.randint(0,256)
+		number2 = random.randint(0,1024)
+		calculation = number1 ** number2
 		time2 = time.time() - time1
 		time_result = str(time2)
+		aaa = str(calculation)
+		m = aaa+"\n処理時間:"+time_result+"秒"
 		print ("elapsed_time:{0}".format(time_result) + "[sec]")
-		await client.send_message(message.channel, "処理時間:"+time_result+"秒")
+		await client.send_message(message.channel, m)
 
 	if message.content.startswith('help'):
 		embed = discord.Embed(title="玄米ちゃんBOT 取扱説明書", color=0x47f558)
