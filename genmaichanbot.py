@@ -182,7 +182,7 @@ async def on_message(message):
 
 	if message.content.startswith('test'):
 		time1 = time.time()
-		for i in (10000):
+		for i in range(1000000):
 			i ** random.randint(0,50)
 		time2 = time.time() - time1
 		time_result = "処理速度：" +str(time2)+ "秒です。"
