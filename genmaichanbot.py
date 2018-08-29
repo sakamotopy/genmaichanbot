@@ -185,9 +185,9 @@ async def on_message(message):
 		for i in range(100):
 			i ** 100
 		time2 = time.time()
-		time3 = time1 - time2
+		time3 = time2 - time1
 		
-		await client.send_message(message.channel, f"処理時間:{time3}")
+		await client.send_message(message.channel, "処理時間:"+time3)
 
 	if message.content.startswith('help'):
 		embed = discord.Embed(title="玄米ちゃんBOT 取扱説明書", color=0x47f558)
