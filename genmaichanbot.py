@@ -47,6 +47,7 @@ async def on_message(message):
 	if message.content.startswith('yo'):
 		msg = 'yo! {0.author.mention}'.format(message)
 		await client.send_message(message.channel, msg )
+
 	if message.content.startswith('bitcoin'):
 		btc_jpy = int(zaif.last_price('btc_jpy')["last_price"])
 		await client.send_message(message.channel,'Bitcoin Price  : '+str(btc_jpy)+ ' yen')
@@ -62,6 +63,7 @@ async def on_message(message):
 	if message.content.startswith('nem'):
 		xem_jpy = float(zaif.last_price('xem_jpy')["last_price"])
 		await client.send_message(message.channel,'Nem(xem) Price : '+str(xem_jpy)+' yen')
+
 	if message.content.startswith('weather'):
 		json_url = 'http://weather.livedoor.com/forecast/webservice/json/v1'
 		payload = {'city':'130010'}
@@ -97,16 +99,14 @@ async def on_message(message):
 		wiwi = search_page.url
 		mwiki = 'https://ja.m.wikipedia.org/wiki/'+message.content[5:]
 		await client.send_message(message.channel,wi+'....\n'+ mwiki )
-	if message.content.startswith('test '):
-		wikiurl = 'https://ja.m.wikipedia.org/wiki/'+message.content[5:]
-		await client.send_message(message.channel,wikiurl)
+
 	if message.content.startswith('dango'):
 		await client.send_message(message.channel, ':dango:' )
+
 	if message.content.startswith('dice'):
 		num = random.randint(1,6)
 		dice1 = ":game_die: --> "
 		await client.send_message(message.channel,dice1+str(num) )
-
 
 	if message.content.startswith('chinchiro'):
 		num = random.randint(1,6)
@@ -167,15 +167,27 @@ async def on_message(message):
 		omikuji = ["おめでとう！！\n超大吉だよ！天才！すごい！！","吉。普通だね！","あっ、、大凶！\nお祓いしときますね…","f**k you"]
 		omikuji_r = "{0.author.mention} ".format(message) +"\n"+  random.choice(omikuji)
 		await client.send_message(message.channel,omikuji_r)
+
 #	if message.content.startswith('def'):
 #		def gorira():
 #			go = random.randint(1,100)
 #		gorira_ran = gorira()
 #		await client.send_message(message.channel,str(gorira_ran))
+
 	if message.content.startswith('にゃんにゃん'):
 		await client.send_message(message.channel, 'https://youtu.be/MOSYstIWZug')
+
 	if message.content.startswith('はあと様'):
 		await client.send_message(message.channel, 'かわいい！\n'+'https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg')
+
+	if message.content.startswith('test'):
+		time1 = time.time()
+		for i in range(100):
+			i ** 100
+		time2 = time.time()
+		time3 = time1 - time2
+		m = 処理時間:{time3}
+		await client.send_message(message.channel, m)
 
 	if message.content.startswith('help'):
 		embed = discord.Embed(title="玄米ちゃんBOT 取扱説明書", color=0x47f558)
